@@ -1,0 +1,658 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(223, 176, 22)!important;
+}
+
+nav {
+    position: relative;
+    background-color: rgb(6, 6, 7);
+    width: 100%;
+    height: 140px;
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+.logodiv {
+    position: relative;
+    width: 100%;
+    height: 85px;
+}
+
+.logodiv img {
+    height: 100px;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-right: 20px;
+}
+
+.logodiv label {
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+
+#logo_1 {
+    color: rgb(223, 176, 22);
+}
+
+.buttons ul {
+    float: left;
+    margin-left: 30px;
+}
+
+.buttons ul li {
+    display: inline-block;
+    border: none;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.buttons li button {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 7px 13px;
+    border-radius: 3px;
+    font-size: 19px;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    outline: none;
+}
+
+.buttons button:hover,
+.buttons button.active {
+    border-top: 2px solid rgb(223, 176, 22);
+    color: rgb(223, 176, 22);
+    cursor: pointer;
+}
+
+.icons ul {
+    float: right;
+    margin-right: 40px;
+}
+
+.icons ul li {
+    display: inline-block;
+}
+
+.icons img {
+    width: 40px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    border: none;
+}
+
+.icons img:hover {
+    cursor: pointer;
+}
+
+.checkbtn {
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.buttons {
+    display: block;
+}
+
+#check:checked~#share_icon {
+    display: none;
+}
+
+#share {
+    display: none;
+}
+
+#share_icon {
+    position: absolute;
+    right: 40px;
+}
+
+#check_icon {
+    position: absolute;
+    font-size: 30px;
+    left: 50px;
+}
+
+@media(max-width:735px) {
+    #share_icon {
+        display: block;
+    }
+    .icons ul {
+        position: fixed;
+        width: 100%;
+        height: 10vh;
+        background: black;
+        top: 140px;
+        border-top: 1px solid rgb(223, 176, 22);
+        border-bottom: 1px solid rgb(223, 176, 22);
+        right: calc(-100% - 40px);
+        text-align: center;
+        transition: all .5s;
+    }
+    .icons ul li {
+        display: contents;
+    }
+    #share:checked~.icons ul {
+        right: 0;
+    }
+    .buttons li button {
+        font-size: 17px;
+    }
+    .logodiv label {
+        font-size: 45px;
+    }
+}
+
+@media(max-width:550px) {
+    #check_icon {
+        display: block;
+    }
+    .buttons ul {
+        position: fixed;
+        width: 100%;
+        height: 30vh;
+        background: black;
+        top: 140px;
+        border-top: 1px solid rgb(223, 176, 22);
+        border-bottom: 1px solid rgb(223, 176, 22);
+        left: calc(-100% - 30px);
+        text-align: center;
+        transition: all .5s;
+    }
+    .buttons ul li {
+        margin-top: 20px;
+        display: block;
+    }
+    #check:checked~.buttons ul {
+        left: -30px;
+    }
+    .logodiv label {
+        font-size: 30px;
+    }
+    .logodiv img {
+        font-size: 60px;
+    }
+}
+
+#start {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    padding-top: 10px;
+    height: calc(100vh - 140px);
+    text-align: center;
+    /* display: none; */
+}
+
+#carouselExampleCaptions {
+    border: 2px solid black;
+}
+
+#start button {
+    margin: 50px 0;
+    width: 200px;
+    border: 5px solid black;
+    border-radius: 30px;
+    cursor: pointer;
+    background: transparent;
+    color: black;
+    outline: none;
+    text-decoration: none;
+    transition: 0.4s ease-in-out;
+}
+
+#start button:hover {
+    background-color: rgb(223, 176, 22);
+    width: 220px;
+    border-radius: 40px;
+    color: black;
+}
+
+#start button b {
+    font-size: 200%;
+}
+
+#contact {
+    border: 2px solid black;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 30px;
+    background: black;
+    display: none;
+}
+
+#contact input {
+    width: 310px;
+    padding: 4px;
+    border: 1.5px solid white;
+    background: black;
+    color: white;
+    outline: none;
+    caret-color: white;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#contact input::placeholder,
+#contact textarea::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+#contact textarea {
+    background: black;
+    outline: none;
+    padding: 4px;
+    border: 1.5px solid white;
+    caret-color: white;
+    color: white;
+}
+
+#contact label {
+    font-size: 52px;
+    margin-bottom: 30px;
+    color: rgb(223, 176, 22);
+}
+
+#contact input[type=submit] {
+    width: 200px;
+    transition: 0.3s ease-in-out;
+}
+
+#contact input[type=submit]:hover {
+    width: 210px;
+}
+
+#preference {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5%);
+    display: none;
+    margin-bottom: 50px;
+    width: 70%;
+}
+
+#preference h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 50px;
+    font-family: 'Fjalla One', sans-serif;
+    font-family: 'Libre Baskerville', serif;
+    color: #000;
+}
+
+#preference_img1 {
+    width: 44%;
+}
+
+#preference_img2 {
+    width: 44%;
+}
+
+#preference button {
+    width: 55%;
+    border: 2px solid #000;
+    border-radius: 40px;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.6s ease-in-out;
+    color: #000;
+    text-align: center;
+    background-color: transparent;
+}
+
+#preferencebutton1 {
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+#preferencebutton2 {
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#preference .container {
+    text-align: center;
+}
+
+#preference button::before {
+    content: "";
+    display: block;
+    padding-top: 40%;
+}
+
+#preference button::after {
+    content: "";
+    display: block;
+    padding-bottom: 40%;
+}
+
+#preference button b {
+    margin-top: 100%;
+    font-size: 40px;
+}
+
+#preference button:hover {
+    background-color: #000;
+    color: rgb(223, 176, 22);
+}
+
+#veg {
+    position: relative;
+    text-align: center;
+    margin-top: 30px;
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#veg h1 {
+    color: #000;
+    font-size: 40px;
+}
+
+#veg h2 {
+    color: #000;
+    margin: 20px;
+    font-size: 30px;
+}
+
+#veg_img1 {
+    width: 80%;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#veg ul {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5%);
+    list-style-type: none;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+#veg ul li {
+    width: 200px;
+    text-align: left;
+}
+
+@media(max-width: 790px) {
+    #veg ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+
+@media(max-width: 540px) {
+    #veg ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+
+#veg_form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#veg button {
+    width: 125px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    margin: 30px 0;
+    cursor: pointer;
+    color: #000;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+#veg button:hover {
+    background-color: #000;
+    color: rgb(223, 176, 22);
+}
+
+@media(max-width:975px) {
+    #preference button b {
+        font-size: 20px;
+    }
+}
+
+@media(max-width:952px) {
+    #veg h1 {
+        font-size: 30px;
+    }
+    nav {
+        width: 100%;
+    }
+}
+
+#nonveg {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    margin-top: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+#nonveg h1 {
+    color: #000;
+    font-size: 40px;
+}
+
+#nonveg h2 {
+    color: #000;
+    margin: 20px;
+    font-size: 30px;
+}
+
+#nonveg_img1 {
+    width: 100%;
+    border: 2px solid black;
+    padding: 10px;
+    margin-top: 5%;
+}
+
+#nonveg ul {
+    position: relative;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5%);
+    list-style-type: none;
+    columns: 3;
+    -webkit-columns: 3;
+    -moz-columns: 3;
+}
+
+#nonveg ul li {
+    text-align: left;
+    width: 220px;
+}
+
+@media(max-width: 790px) {
+    #nonveg ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
+}
+
+@media(max-width: 540px) {
+    #nonveg ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+    }
+}
+
+#nonveg_form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#nonveg button {
+    width: 125px;
+    height: 40px;
+    border: 2px solid #000;
+    border-radius: 30px;
+    margin: 30px 0;
+    cursor: pointer;
+    color: #000;
+    outline: none;
+    background: none;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+#nonveg button:hover {
+    background-color: #000;
+    color: rgb(223, 176, 22);
+}
+
+@media(max-width:952px) {
+    #nonveg h1 {
+        font-size: 30px;
+    }
+    #nonveg h2 {
+        font-size: 25px;
+    }
+}
+
+#veg input[type=checkbox]+label,
+#nonveg input[type=checkbox]+label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+#veg input[type=checkbox],
+#nonveg input[type=checkbox] {
+    display: none;
+}
+
+#veg input[type=checkbox]+label:before,
+#nonveg input[type=checkbox]+label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+}
+
+#veg input[type=checkbox]+label:active:before,
+#nonveg input[type=checkbox]+label:active:before {
+    transform: scale(0);
+}
+
+#veg input[type=checkbox]:checked+label:before,
+#nonveg input[type=checkbox]:checked+label:before {
+    background-color: MediumSeaGreen;
+    border-color: MediumSeaGreen;
+    color: #fff !important;
+}
+
+#recipe {
+    width: 100%;
+    display: none;
+    outline: none;
+    text-decoration: none;
+}
+
+#recipe label {
+    font-size: 55px;
+    text-align: center;
+    color: #000;
+    width: 100%;
+}
+
+@media(max-width:735px) {
+    #recipe label {
+        font-size: 45px;
+    }
+}
+
+@media(max-width:540px) {
+    #recipe label {
+        font-size: 45px;
+    }
+}
+
+#result {
+    display: none;
+}
+
+#result img {
+    width: 25rem;
+    height: 25rem;
+}
+
+#result ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+}
+
+#result ul li {
+    border: 2px solid black!important;
+}
+
+#footer {
+    background-color: black;
+    color: green;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    border: 0.5px solid white;
+    margin-right: 10px;
+    padding: 5px;
+}
