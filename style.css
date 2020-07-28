@@ -128,9 +128,7 @@ nav {
 }
 
 @media(max-width:735px) {
-    #share_icon {
-        display: block;
-    }
+
     .icons ul {
         position: fixed;
         width: 100%;
