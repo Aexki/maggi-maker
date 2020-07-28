@@ -1,13 +1,5 @@
 console.log('Hi there, thanks for visiting my site.. If you have any suggestions regarding the page, contact at aexkithatsme@gmail.com');
 
-$.getJSON("https://api.ipify.org?format=jsonp&callback=?",
-    function(json) {
-        $.getJSON("http://api.ipstack.com/" + json.ip + "?access_key=e389d3bdb6ee2f83641617690f3d0fc8", function(json) {
-            json["site"] = `maggi-maker.glitch.me`
-            $.post("https://script.google.com/macros/s/AKfycbzkgyddBmkLoR-uN4Eufy6hR1Lta8DVpnXCn9rXGGcJvHvUZmU/exec", json)
-        });
-    }
-);
 
 function contact() {
     document.getElementById("cbtn").classList.add("active");
